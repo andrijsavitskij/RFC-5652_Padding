@@ -128,7 +128,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="RFC-5652_Padding.c" />
-    <ClCompile Include="Source.c" />
+    <ClCompile Include="Padding.c" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Padding.h" />

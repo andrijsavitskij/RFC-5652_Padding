@@ -18,7 +18,7 @@
     <ClCompile Include="RFC-5652_Padding.c">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
-    <ClCompile Include="Source.c">
+    <ClCompile Include="Padding.c">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
   </ItemGroup>
