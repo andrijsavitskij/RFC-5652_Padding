@@ -4,14 +4,13 @@
 /*
 * add "return" to defines because: 
 * return RET_OK; longer then RET_OK;
-I think readability has not been lost
+I think readability has not been alost
 well, maybe a little)
 */
 /** Error code */ 
 #define RET_OK                return 0  // Successful 
 #define WRONG_PARAMETER_ERROR return 1  // Invalid input parameter
 #define RUNTIME_ERROR         return 2  // Others errors
-
 
 #include "some.h"
 
@@ -66,7 +65,7 @@ int kp_unpad_alloc(Data* data, size_t k, Data* unpadded) {
     */
 
     if (data->len == NULL || data->len <= 0 || data->buf == NULL || (k > 255 && k < 1)) WRONG_PARAMETER_ERROR;
-    dataInit(&unpadded, data->len, data->buf);
+    dataInit(unpadded, data->len, data->buf);
     return kp_unpad(unpadded, k);
 }
 
