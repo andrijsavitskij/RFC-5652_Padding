@@ -62,7 +62,7 @@ PADDING_EXPORT int kp_pad(Data* data, size_t k);
  *
  * @return код помилки
  */
-PADDING_EXPORT int kp_pad_alloc(Data* data, size_t k, Data* padded); // **pad
+PADDING_EXPORT int kp_pad_alloc(Data* data, size_t k, Data** padded); // **pad
 
 /**
  * Знімає доповнення з вхідних даних згідно з описом із rfc5652 розділ 6.3.
@@ -88,7 +88,7 @@ PADDING_EXPORT int kp_unpad(Data* data, size_t k);
  *
  * @return код помилки
  */
-PADDING_EXPORT int kp_unpad_alloc(Data* data, size_t k, Data* unpadded);// **unpad
+PADDING_EXPORT int kp_unpad_alloc(Data* data, size_t k, Data** unpadded);// **unpad
 
 /**
  * Повний приклад роботи коду
