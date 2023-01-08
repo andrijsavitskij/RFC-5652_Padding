@@ -27,4 +27,10 @@
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
   </ItemGroup>
+  <ItemGroup>
+    <None Include="..\libs\RFC-5652_PaddingDLL.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <Library Include="..\libs\RFC-5652_PaddingDLL.lib" />
+  </ItemGroup>
 </Project>

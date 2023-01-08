@@ -133,6 +133,12 @@
   <ItemGroup>
     <ClInclude Include="Padding.h" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="..\libs\RFC-5652_PaddingDLL.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <Library Include="..\libs\RFC-5652_PaddingDLL.lib" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

@@ -1,5 +1,4 @@
 ﻿#define _CRT_SECURE_NO_WARNINGS
-//#include "Padding.h"
 #include "Padding.h"
 
 // colors for consol
