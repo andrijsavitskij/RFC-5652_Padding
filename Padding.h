@@ -55,8 +55,7 @@ int kp_pad_alloc(Data* data, size_t k, Data* padded) {
     /*
     * just allocs new data(padded) memcpy data -> padded and kp_pad( padded )
     */
-
-    if (data->len == 0 || data->buf == NULL || (k > 255 && k < 1)) WRONG_PARAMETER_ERROR;
+    if (data->len == NULL || data->len <= 0 || data->buf == NULL || (k > 255 && k < 1)) WRONG_PARAMETER_ERROR;
     dataInit(padded, data->len, data->buf);
     return kp_pad(padded, k);
 }
@@ -66,8 +65,8 @@ int kp_unpad_alloc(Data* data, size_t k, Data* unpadded) {
     * just allocs new data(unpadded) memcpy data -> unpadded and kp_pad( unpadded )
     */
 
-    if (data->len == 0 || data->buf == NULL || (k > 255 && k < 1)) WRONG_PARAMETER_ERROR;
-    dataInit(unpadded, data->len, data->buf);
+    if (data->len == NULL || data->len <= 0 || data->buf == NULL || (k > 255 && k < 1)) WRONG_PARAMETER_ERROR;
+    dataInit(&unpadded, data->len, data->buf);
     return kp_unpad(unpadded, k);
 }
 

@@ -6,6 +6,13 @@ int reedbleRandomTest();
 
 int main(){
 
+    int value = 7;
+
+    int* ptr;
+    int** ptrptr = &ptr;
+
+    *ptrptr = &value;
+
     //Tasks
     Data data1; const int k1 = 0x10;
     dataInit(&data1, 16, (uint8_t[]) { 0x00, 0x01, 0x02, 0x03, 0x04, 0x05, 0x06, 0x07, 0x08, 0x09, 0x0a, 0x0b, 0x0c, 0x0d, 0x0e, 0x0f });
@@ -33,10 +40,6 @@ int main(){
     printData(data3);
     //end tasks
 
-    //Data data;
-    //dataInit(&data, 8, (uint8_t[]) { 0xfd, 0x3d, 0xa1, 0x00, 0x20, 0xcc, 0xe7, 0xff });
-    //dataExamplePadUnpad(data,0x0a, Yellow);
-    
     //full random is:    size(1 - 255) k(1 - 255) 
     //reedble random is: size(5 - 30)  k(2 - 31)
     l1:printf("\nStart random test?(Y/N  (R -reedble rundom test)):");
@@ -70,17 +73,17 @@ int main(){
     }
     }
 
+    return 0;
 }
 
 char* randomColorT_T() {
-    switch (rand() % 7) {
+    switch (rand() % 6) {
     case 0: return Red;
     case 1: return Green;
     case 2: return Yellow;
     case 3: return Blue;
     case 4: return Purple;
     case 5: return Cyan;
-    case 6: return White;
     }
 }
 
