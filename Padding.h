@@ -1,10 +1,17 @@
 ﻿#ifndef TESTTASK_PADDING_H
 #define TESTTASK_PADDING_H
 
-/** Error code */
+/*
+* add "return" to defines because: 
+* return RET_OK; longer then RET_OK;
+I think readability has not been lost
+well, maybe a little)
+*/
+/** Error code */ 
 #define RET_OK                return 0  // Successful 
 #define WRONG_PARAMETER_ERROR return 1  // Invalid input parameter
 #define RUNTIME_ERROR         return 2  // Others errors
+
 
 #include "some.h"
 
