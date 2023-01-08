@@ -15,9 +15,9 @@ well, maybe a little)
 
 #if defined(_WIN32)
 #if defined(PADDING_EXPORTING)
-#define PADDING_EXPORT __declspec(dllexport)
-#else
 #define PADDING_EXPORT __declspec(dllimport)
+#else
+#define PADDING_EXPORT __declspec(dllexport)
 #endif
 #else
 #define PADDING_EXPORT
